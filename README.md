@@ -1,6 +1,12 @@
-# Talks Template like [antfu/talks](https://github.com/antfu/talks)
+# Penn's talks
 
-Start writing Slides with markdown soon, using [Slidev](https://github.com/slidevjs/slidev)!
+###### 2025
+
+- `zh` [MCTS Variant Performance Prediction](./2025-12-14) - Class Presentation Songshan Lake 2025
+
+# Template
+
+<div align="center"><a href="https://github.com/LittleSound/talks-template?tab=readme-ov-file">Origin repo</a></div>
 
 ## Features
 
@@ -78,17 +84,3 @@ To develop the Slides Website with a remote host, run
 ```bash
 pnpm dev:host
 ```
-
-## Sponsors
-
-<p align="center">
-  <a href="https://github.com/sponsors/LittleSound">
-    <img src="https://cdn.jsdelivr.net/gh/littlesound/sponsors/sponsors.svg"/>
-  </a>
-</p>
-
-<p align="center">
-  This project is made possible by all the sponsors supporting my work <br>
-  You can join them at my sponsors profile:
-</p>
-<p align="center"><a href="https://github.com/sponsors/LittleSound"><img src="https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86&style=for-the-badge" /></a></p>
