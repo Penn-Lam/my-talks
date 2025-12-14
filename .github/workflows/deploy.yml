@@ -28,8 +28,18 @@ jobs:
         run: pnpm install --frozen-lockfile
       - name: Build slides
         run: |
-          cd 'feature-creation&selection/src'
-          pnpm exec slidev build --out ../../dist --base /${{ github.event.repository.name }}/
+          set -euo pipefail
+          mkdir -p dist
+          for dir in */; do
+            if [ -f "${dir%/}/src/slides.md" ]; then
+              slug="${dir%/}"
+              echo "Building slide ${slug}"
+              (
+                cd "${dir%/}/src"
+                pnpm exec slidev build --out "../../dist/${slug}" --base "/${{ github.event.repository.name }}/${slug}/"
+              )
+            fi
+          done
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
