@@ -27,7 +27,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
       - name: Build slides
-        run: pnpm exec slidev build 'feature-creation&selection/src/slides.md' --out dist --base /${{ github.event.repository.name }}/
+        run: |
+          cd 'feature-creation&selection/src'
+          pnpm exec slidev build --out ../../dist --base /${{ github.event.repository.name }}/
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
