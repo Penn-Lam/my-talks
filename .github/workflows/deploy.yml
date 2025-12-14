@@ -29,15 +29,13 @@ jobs:
       - name: Build slides
         run: |
           set -euo pipefail
+          rm -rf dist
           mkdir -p dist
           for dir in */; do
             if [ -f "${dir%/}/src/slides.md" ]; then
               slug="${dir%/}"
               echo "Building slide ${slug}"
-              (
-                cd "${dir%/}/src"
-                pnpm exec slidev build --out "../../dist/${slug}" --base "/${{ github.event.repository.name }}/${slug}/"
-              )
+              pnpm exec slidev build "${dir%/}/src/slides.md" --out "dist/${slug}" --base "/${{ github.event.repository.name }}/${slug}/"
             fi
           done
       - name: Setup Pages
