@@ -2,7 +2,7 @@
 
 ###### 2025
 
-- `zh` [MCTS Variant Performance Prediction](./2025-12-14) - Class Presentation Songshan Lake 2025
+- `zh+en` [MCTS Variant Performance Prediction](./2025-12-14) - Class Presentation Songshan Lake 2025
 
 # Template
 
